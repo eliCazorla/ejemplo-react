@@ -8,7 +8,7 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-       {nombres.map(nom => <Texto nombre={nom}/>)}
+       {nombres.map(nom => <Texto nombre={nom} key={nom}/>)}
       </header>
     </div>
   );
