@@ -1,11 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 
-const Texto = ({nombre}) => {
+const Texto = ({nombre, pos}) => {
     //const { nombre } = props.nombre; esto es si me llega el objeto props entero.
+    const [contador, setContador] = useState(0);
+    const aumentar = () => {
+        setContador(contador + 1);
+    }
+
     return (
-        <p>   
-            {nombre}
-        </p>
+        <div>
+            <p>   
+            {pos}: {nombre} (Cantidad: {contador})
+            </p>
+            <input type='button' value='mostrar' onClick={aumentar}/>
+        </div>
     )
 }
 
